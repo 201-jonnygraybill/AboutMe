@@ -8,6 +8,21 @@
     margin: 20px;
   }
 
+
+  #topbanner {
+    height: 200px;
+    width: 100%;
+    background-image: url(../img/harley883.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+  }
+    
+
   a:visited {
       color:orange;
     }
@@ -20,17 +35,13 @@
     color: orange;
   }  
 
-#top-about-me {
-    margin: auto;
-    text-align: center;
-}
-
-#backyard {
+#me {
   width: 250px;
   height: 275px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  z-index: 2; 
+  position: absolute;
+  left: 800px;
+  bottom: 300px;
 }
 
 #border-box {
@@ -38,53 +49,87 @@
   display: inline-block;
 }
 
-.left-column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    height: 300px;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Washington-state-map_h.svg/2000px-Washington-state-map_h.svg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: orange;
+#maintext {
+  width: 500px;
+  z-index: 3;
+  position: absolute;
+  bottom: 350px;
+  left: 260px;
 }
 
-.right-column {
-    float: right;
-    width: 33.33%;
-    padding: 10px;
-    height: 300px;
-    background-image: url(https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/4417/s300/cf-logo-shield.png);
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: orange;
+#imagecaption {
+  z-index: 4;
+  position: absolute;
+  left: 810px;
+  top: 500px;
 }
 
-.center-column {
-    margin: 0 auto;
-    width: 33.33%;
-    padding: 10px;
-    height: 300px;
-    background-image: url(https://www.goodfreephotos.com/albums/vector-images/evil-hooded-skull-vector-clipart.png);
-    background-size: cover;
-    color: orange;
+#infographic {
+  z-index: 5;
+  position: absolute;
+  top: 500px;
+  left: 325px;
+  height: 300px;
+  width: 350px;
 }
 
-.center-column:hover {
-    background-color: gray;
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0px;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  top: 200px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  opacity: 0.9;
 }
 
-.right-column:hover {
-    background-color: gray;
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
 
-.left-column:hover {
-    background-color: gray;
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
 }
