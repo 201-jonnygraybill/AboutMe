@@ -8,10 +8,16 @@
     margin: 20px;
   }
 
+  #wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    widows: 1080px;
+  }
+
 
   #topbanner {
     height: 200px;
-    width: 100%;
+    width: 1120px;
     background-image: url(../img/harley883.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,7 +47,7 @@
   z-index: 2; 
   position: absolute;
   left: 800px;
-  bottom: 300px;
+  top: 225px;
 }
 
 #border-box {
@@ -53,7 +59,7 @@
   width: 500px;
   z-index: 3;
   position: absolute;
-  bottom: 350px;
+  top: 220px;
   left: 260px;
 }
 
